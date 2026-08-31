@@ -1,0 +1,17 @@
+[
+  {
+    "name": "আতাউল্লাহ",
+    "position": "চেয়ারম্যান",
+    "photo": "assets/images/members/chairman.jpg"
+  },
+  {
+    "name": "আবদুল হালীম",
+    "position": "হিসাব রক্ষক",
+    "photo": "assets/images/members/accountant.jpg"
+  },
+  {
+    "name": "আসলাম উদ্দিন",
+    "position": "সাধারণ সম্পাদক",
+    "photo": "assets/images/members/subeditor.jpg"
+  }
+]
