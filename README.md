@@ -1,11 +1,25 @@
-# An Nafe Organization
+# An Nafe Organization (ANO)
 
-Vercel-ready static HTML/CSS/JS website for আন নাফে অর্গানাইজেশন (ANO).
+Mobile-first, Vercel-ready static website for আন নাফে অর্গানাইজেশন.
 
-Upload the whole project to GitHub and import the repository into Vercel. No build command is required.
+## Upload to GitHub
+Upload the contents of this folder to the root of your `mimmdmahfuj/ano` repository.
 
-Replace member JPG files with the real photos: chairman.jpg, accountant.jpg, subeditor.jpg.
+## Vercel
+No build step is required. Framework: Other / Static. Output directory: `.`
 
-Portal URLs are stored in assets/js/portal.js.
+## Images
+- `assets/images/logo.png` — supplied ANO logo
+- `assets/images/members/chairman.jpg`
+- `assets/images/members/accountant.jpg`
+- `assets/images/members/subeditor.jpg`
 
-Edit organization data in data/settings.json.
+If the member image paths in your GitHub repository are different, change the three `src` values in `members.html`.
+
+## Portals
+Portal URLs are configured in `assets/js/portal.js`.
+
+## Main information
+Address: Dhanmondi, Dhaka
+Phone: +8801635275513
+Email: annafeorg@gmail.com
