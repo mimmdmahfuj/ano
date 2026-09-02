@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (title) title.textContent = type === "member" ? "মেম্বার পোর্টাল" : "অ্যাডমিন পোর্টাল";
       if (loading) loading.style.display = "flex";
       frame.src = PORTALS[type] || PORTALS.member;
-      modal.classList.add("open");
+      modal.classList.add("open", "active");
       modal.setAttribute("aria-hidden", "false");
       document.body.style.overflow = "hidden";
     });

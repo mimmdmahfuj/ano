@@ -1,5 +1,42 @@
 [
-  {"name":"আতাউল্লাহ","position":"চেয়ারম্যান","position_en":"Chairman","photo":"assets/images/members/chairman.jpg"},
-  {"name":"আবদুল হালীম","position":"হিসাব রক্ষক","position_en":"Accountant","photo":"assets/images/members/accountant.jpg"},
-  {"name":"আসলাম উদ্দিন","position":"সাধারণ সম্পাদক","position_en":"General Secretary","photo":"assets/images/members/subeditor.jpg"}
+  {
+    "id": "chairman",
+    "name": "আতাউল্লাহ",
+    "position": "চেয়ারম্যান",
+    "position_en": "Chairman",
+    "photo": "assets/images/members/chairman.jpg",
+    "page": "member-chairman.html",
+    "phone": "+8801635275513",
+    "email": "annafeorg@gmail.com"
+  },
+  {
+    "id": "accountant",
+    "name": "আবদুল হালীম",
+    "position": "হিসাব রক্ষক",
+    "position_en": "Accountant",
+    "photo": "assets/images/members/accountant.jpg",
+    "page": "member-accountant.html",
+    "phone": "+8801635275513",
+    "email": "annafeorg@gmail.com"
+  },
+  {
+    "id": "secretary",
+    "name": "আসলাম উদ্দিন",
+    "position": "সাধারণ সম্পাদক",
+    "position_en": "General Secretary",
+    "photo": "assets/images/members/subeditor.jpg",
+    "page": "member-secretary.html",
+    "phone": "+8801635275513",
+    "email": "annafeorg@gmail.com"
+  },
+  {
+    "id": "mahfuj",
+    "name": "মোঃ মাহফুজুর রহমান",
+    "position": "সদস্য",
+    "position_en": "Member",
+    "photo": "assets/images/members/member-placeholder.svg",
+    "page": "member-mahfuj.html",
+    "phone": "০১৭৫৬৮১৭৬৪৩",
+    "email": "mimmd.mahfuj@gmail.com"
+  }
 ]
