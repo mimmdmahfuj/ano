@@ -1,13 +1,13 @@
 [
   {
     "id": "chairman",
-    "name": "আতাউল্লাহ",
+    "name": "আবির হুসাইন",
     "position": "চেয়ারম্যান",
     "position_en": "Chairman",
     "photo": "assets/images/members/chairman.jpg",
     "page": "member-chairman.html",
-    "phone": "+8801635275513",
-    "email": "annafeorg@gmail.com"
+    "phone": "+8801982272999",
+    "email": "abir5848@gmail.com"
   },
   {
     "id": "accountant",
@@ -16,27 +16,27 @@
     "position_en": "Accountant",
     "photo": "assets/images/members/accountant.jpg",
     "page": "member-accountant.html",
-    "phone": "+8801635275513",
-    "email": "annafeorg@gmail.com"
+    "phone": "+880 1818-830427",
+    "email": "amabdulhalim1996@gmail.com"
   },
   {
     "id": "secretary",
-    "name": "আসলাম উদ্দিন",
+    "name": "আসলাম হোসাইন",
     "position": "সাধারণ সম্পাদক",
     "position_en": "General Secretary",
     "photo": "assets/images/members/subeditor.jpg",
     "page": "member-secretary.html",
-    "phone": "+8801635275513",
-    "email": "annafeorg@gmail.com"
+    "phone": "+8801982272999",
+    "email": "aslambinyousuf9@gmail.com"
   },
   {
     "id": "mahfuj",
-    "name": "মোঃ মাহফুজুর রহমান",
+    "name": "Ataullah Bin Sayed",
     "position": "সদস্য",
     "position_en": "Member",
-    "photo": "assets/images/members/member-placeholder.svg",
+    "photo": "assets/images/members/member.jpg",
     "page": "member-mahfuj.html",
-    "phone": "০১৭৫৬৮১৭৬৪৩",
-    "email": "mimmd.mahfuj@gmail.com"
+    "phone": "01933552380",
+    "email": "ataullahbinsayed@gmal.com"
   }
 ]
