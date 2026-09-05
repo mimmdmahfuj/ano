@@ -10,12 +10,15 @@ document.addEventListener("DOMContentLoaded", () => {
   const loading = document.querySelector(".modal-loading");
   if (!modal || !frame) return;
 
-  const close = () => {
-    modal.classList.remove("open", "active");
-    modal.setAttribute("aria-hidden", "true");
-    frame.src = "about:blank";
-    document.body.style.overflow = "";
-    if (loading) loading.style.display = "none";
+  const confirmAndClose = () => {
+    const isConfirmed = confirm("আপনি কি নিশ্চিত যে পোর্টাল বন্ধ করতে চান?");
+    if (isConfirmed) {
+      modal.classList.remove("open", "active");
+      modal.setAttribute("aria-hidden", "true");
+      frame.src = "about:blank";
+      document.body.style.overflow = "";
+      if (loading) loading.style.display = "none";
+    }
   };
 
   document.querySelectorAll("[data-portal]").forEach((button) => {
@@ -33,9 +36,12 @@ document.addEventListener("DOMContentLoaded", () => {
   frame.addEventListener("load", () => {
     if (loading) loading.style.display = "none";
   });
-  modal.querySelector(".portal-close, .modal-close")?.addEventListener("click", close);
-  modal.querySelector(".portal-backdrop, .modal-backdrop")?.addEventListener("click", close);
+
+  modal.querySelector(".portal-close, .modal-close")?.addEventListener("click", confirmAndClose);
+  // Disabled backdrop auto-close to prevent accidental dismissal
   document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape" && (modal.classList.contains("open") || modal.classList.contains("active"))) close();
+    if (event.key === "Escape" && (modal.classList.contains("open") || modal.classList.contains("active"))) {
+      confirmAndClose();
+    }
   });
 });
