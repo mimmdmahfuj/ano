@@ -471,3 +471,13 @@ h2 span, .section-heading h2 span, .philosophy-content h2 span, .portal-content 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
 }
+
+
+
+
+
+
+
+
+.member-card-container { ... }
+.member-profile-card { padding: 0 30px 30px; margin-top: -50px; ... }
