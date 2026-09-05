@@ -27,16 +27,16 @@
                 <span>ORGANIZATION</span>
             </div>
         </a>
-        <button class="mobile-menu-btn" aria-label="Open Menu" aria-expanded="false">
+        <button class="mobile-menu-btn" aria-label="Open Menu" aria-expanded="false" id="menuBtn">
             <i class="bi bi-list"></i>
         </button>
-        <nav class="main-nav">
+        <nav class="main-nav" id="mainNav">
             <a href="index.html">হোম</a>
             <a href="about.html">আমাদের সম্পর্কে</a>
             <a href="activities.html">কার্যক্রম</a>
             <a href="members.html" class="active">পরিচালনা পরিষদ</a>
             <a href="terms.html">নীতিমালা</a>
-                <a href="contact.html">যোগাযোগ</a>
+            <a href="contact.html">যোগাযোগ</a>
             <a href="index.html#portal" class="nav-portal">পোর্টাল <i class="bi bi-arrow-up-right"></i></a>
         </nav>
     </div>
@@ -55,21 +55,26 @@
         <div class="container">
             <div class="member-detail-grid">
                 <div class="member-profile-card reveal">
-                    <div class="member-avatar-wrapper">
-                        <img src="assets/images/members/accountant.jpg" alt="আবদুল হালীম" onerror="this.src='assets/images/members/member-placeholder.svg'">
-                        <span class="badge-role">ACCOUNTANT</span>
+                    <div class="member-card-container">
+                        <div class="profile-cover-banner"></div>
+                        <div class="member-profile-card-inner">
+                            <div class="member-avatar-wrapper">
+                                <img src="assets/images/members/accountant.jpg" alt="আবদুল হালীম" onerror="this.src='assets/images/members/member-placeholder.svg'">
+                                <span class="badge-role">ACCOUNTANT</span>
+                            </div>
+                            <h2>আবদুল হালীম</h2>
+                            <p class="role-title">হিসাব রক্ষক</p>
+                            <div class="member-contact-info">
+                                <div><i class="bi bi-building"></i> আন নাফে অর্গানাইজেশন</div>
+                                <div><i class="bi bi-geo-alt"></i> 31/1 শঙ্কর (১ম তলা), পশ্চিম ধানমন্ডি মসজিদ এলাকা, পশ্চিম ধানমন্ডি, ঢাকা-১২০৯</div>
+                                <div><i class="bi bi-envelope"></i> <a href="mailto:annafeorganization@gmail.com">annafeorganization@gmail.com</a></div>
+                                <div><i class="bi bi-telephone"></i> <a href="tel:+8801635275513">+880 1635-275513</a></div>
+                            </div>
+                            <a href="members.html" class="btn btn-outline-dark" style="margin-top:20px; width:100%;">
+                                <i class="bi bi-arrow-left"></i> পরিচালনা পরিষদে ফিরুন
+                            </a>
+                        </div>
                     </div>
-                    <h2>আবদুল হালীম</h2>
-                    <p class="role-title">হিসাব রক্ষক</p>
-                    <div class="member-contact-info">
-                        <div><i class="bi bi-building"></i> আন নাফে অর্গানাইজেশন</div>
-                        <div><i class="bi bi-geo-alt"></i> 31/1 ശങ്കর (১ম তলা), পশ্চিম ধানমন্ডি মসজিদ এলাকা, পশ্চিম ধানমন্ডি, ঢাকা-১২০৯</div>
-                        <div><i class="bi bi-envelope"></i> <a href="mailto:annafeorganization@gmail.com">annafeorganization@gmail.com</a></div>
-                        <div><i class="bi bi-telephone"></i> <a href="tel:+8801635275513">+880 1635-275513</a></div>
-                    </div>
-                    <a href="members.html" class="btn btn-outline-dark" style="margin-top:20px; width:100%;">
-                        <i class="bi bi-arrow-left"></i> পরিচালনা পরিষদে ফিরুন
-                    </a>
                 </div>
 
                 <div class="speech-box reveal delay-1">
@@ -103,11 +108,11 @@
             <a href="activities.html">কার্যক্রম</a>
             <a href="members.html">পরিচালনা পরিষদ</a>
             <a href="terms.html">নীতিমালা</a>
-                <a href="contact.html">যোগাযোগ</a>
+            <a href="contact.html">যোগাযোগ</a>
         </div>
         <div>
             <h4>যোগাযোগ</h4>
-            <p>31/1 ശങ്കর (১ম তলা), পশ্চিম ধানমন্ডি মসজিদ এলাকা, পশ্চিম ধানমন্ডি, ঢাকা-১২০৯</p>
+            <p>31/1 শঙ্কর (১ম তলা), পশ্চিম ধানমন্ডি মসজিদ এলাকা, পশ্চিম ধানমন্ডি, ঢাকা-১২০৯</p>
             <a href="tel:+8801635275513">+880 1635-275513</a>
             <a href="mailto:annafeorganization@gmail.com">annafeorganization@gmail.com</a>
         </div>
@@ -124,6 +129,25 @@
     </div>
 </footer>
 
+<!-- মোবাইল মেনু টগল করার জন্য স্ক্রিপ্ট -->
+<script>
+    const menuBtn = document.getElementById('menuBtn');
+    const mainNav = document.getElementById('mainNav');
+    
+    menuBtn.addEventListener('click', () => {
+        mainNav.classList.toggle('active');
+        const icon = menuBtn.querySelector('i');
+        if(mainNav.classList.contains('active')) {
+            icon.classList.remove('bi-list');
+            icon.classList.add('bi-x-lg');
+        } else {
+            icon.classList.remove('bi-x-lg');
+            icon.classList.add('bi-list');
+        }
+    });
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+</script>
 <script src="assets/js/main.js"></script>
 </body>
 </html>
