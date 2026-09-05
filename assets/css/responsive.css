@@ -79,3 +79,60 @@
   .floating-card small { font-size: 8px; }
   .footer-grid { grid-template-columns: 1fr; }
 }
+
+
+
+/* Responsive Media Queries */
+@media (max-width: 992px) {
+  .member-detail-grid { grid-template-columns: 1fr; max-width: 600px; margin: 0 auto; }
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 30px; }
+  .two-col, .portal-wrapper, .hero-container { grid-template-columns: 1fr; gap: 40px; }
+  .stats-card { grid-template-columns: repeat(2, 1fr); }
+  .values-grid, .management-grid, .team-grid { grid-template-columns: repeat(2, 1fr); }
+  .cta-box { flex-direction: column; text-align: center; padding: 40px; }
+}
+
+@media (max-width: 768px) {
+  /* Mobile Menu */
+  .mobile-menu-btn { display: grid; place-items: center; }
+  .main-nav { 
+    display: none; 
+    position: absolute; 
+    top: 82px; 
+    left: 0; 
+    right: 0; 
+    flex-direction: column; 
+    background: #fff; 
+    padding: 15px; 
+    box-shadow: var(--shadow-soft); 
+    border-top: 1px solid var(--border); 
+    gap: 5px;
+  }
+  .main-nav.active { display: flex; }
+  .main-nav a { width: 100%; padding: 12px; text-align: center; }
+  .main-nav .nav-portal { margin: 5px 0 0; text-align: center; }
+
+  /* Footer Adjustments */
+  .footer-grid { grid-template-columns: 1fr; text-align: center; }
+  .footer-brand { display: flex; flex-direction: column; align-items: center; }
+  .footer-brand p { margin-inline: auto; }
+  .footer-bottom { flex-direction: column; gap: 10px; text-align: center; }
+
+  /* Grids to Single Column */
+  .stats-card, .values-grid, .management-grid, .team-grid { grid-template-columns: 1fr; }
+  .stat-divider { display: none; }
+  
+  /* Hero & Sections */
+  .page-hero { padding: 60px 0; text-align: center; }
+  .page-hero .kicker { justify-content: center; }
+  .section-padding, .section { padding: 60px 0; }
+  
+  /* Speech Box Adjustments */
+  .speech-box { padding: 25px; }
+  .speech-title { font-size: 26px; }
+  .speech-signature { text-align: center; }
+  
+  /* Member Card Adjustments */
+  .member-profile-card { padding: 0 20px 20px; }
+  .member-contact-info { text-align: left; }
+}
