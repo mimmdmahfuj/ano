@@ -22,4 +22,4 @@ Portal URLs are configured in `assets/js/portal.js`.
 ## Main information
 Address: Dhanmondi, Dhaka
 Phone: +8801635275513
-Email: annafeorg@gmail.com
+Email: annafeorganization@gmail.com
