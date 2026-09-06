@@ -130,7 +130,7 @@
     position: absolute;
 
     border:
-        1px solid rgba(125,211,252,.25);
+        1px solid rgba(131,246,230,.25);
 
     border-radius: 50%;
 
@@ -242,14 +242,14 @@
     100% {
 
         box-shadow:
-            0 0 0 4px rgba(103,232,249,.12);
+            0 0 0 4px rgba(110,242,224,.12);
 
     }
 
     50% {
 
         box-shadow:
-            0 0 0 8px rgba(103,232,249,.04);
+            0 0 0 8px rgba(110,242,224,.04);
 
     }
 
