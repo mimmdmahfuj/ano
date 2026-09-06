@@ -13,6 +13,8 @@
   .portal-points { justify-items: center; }
   .activities-grid { grid-template-columns: repeat(3, 1fr); }
   .footer-grid { grid-template-columns: repeat(2, 1fr); }
+  .payment-method-grid, .payment-steps { grid-template-columns: 1fr; }
+  .payment-bank-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 850px) {
@@ -70,6 +72,11 @@
   .contact-form { padding: 22px; }
   .footer-grid { grid-template-columns: 1fr 1fr; gap: 28px 18px; }
   .footer-bottom { flex-direction: column; }
+  .payment-note { padding: 22px; }
+  .payment-bank-card { padding: 20px; }
+  .payment-bank-grid { grid-template-columns: 1fr; }
+  .payment-card { min-height: auto; }
+  .payment-warning { align-items: flex-start; }
 }
 
 @media (max-width: 400px) {
