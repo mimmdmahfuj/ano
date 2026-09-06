@@ -30,12 +30,12 @@
     "email": "aslambinyousuf9@gmail.com"
   },
   {
-    "id": "mahfuj",
-    "name": "Ataullah Bin Sayed",
+    "id": "ataullah",
+    "name": "আতাউল্লাহ বিন সাঈদ",
     "position": "সদস্য",
     "position_en": "Member",
     "photo": "assets/images/members/member.jpg",
-    "page": "member-mahfuj.html",
+    "page": "member-ataullah.html",
     "phone": "01933552380",
     "email": "ataullahbinsayed@gmal.com"
   }
