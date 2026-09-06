@@ -44,6 +44,8 @@
         background: #fff;
         box-shadow: 0 8px 24px rgba(6,56,51,.04);
         transition: transform .25s var(--ease-out), box-shadow .25s var(--ease-out);
+        display: flex;
+        flex-direction: column;
     }
     .payment-card:hover { transform: translateY(-7px); box-shadow: var(--shadow-soft); }
     .payment-card-icon {
@@ -76,11 +78,37 @@
         border: 1px dashed var(--border);
         border-radius: 12px;
         background: #fafdfc;
-        font-size: 12px;
-        font-weight: 600;
-        color: var(--text);
+        font-size: 13px;
+        font-weight: 700;
+        color: var(--ink);
     }
-    .payment-placeholder i { color: var(--primary); font-size: 16px; }
+    .payment-placeholder.active {
+        border: 1px solid var(--teal-accent);
+        background: #f0fdfa;
+    }
+    .payment-placeholder i { color: var(--primary); font-size: 18px; }
+
+    /* Mobile Banking Instructions List */
+    .payment-instruction {
+        list-style: none;
+        padding: 0;
+        margin: 15px 0 0;
+    }
+    .payment-instruction li {
+        display: flex;
+        align-items: flex-start;
+        gap: 8px;
+        font-size: 12px;
+        color: var(--muted);
+        margin-bottom: 8px;
+        line-height: 1.5;
+    }
+    .payment-instruction li i {
+        color: var(--primary);
+        font-size: 14px;
+        margin-top: 2px;
+        flex-shrink: 0;
+    }
 
     /* Bank Details Section */
     .payment-bank-section { background: var(--paper); }
@@ -207,27 +235,47 @@
           <p>আপনার প্রয়োজন অনুযায়ী পদ্ধতি নির্বাচন করুন এবং পেমেন্টের পরে রসিদ বা transaction ID সংরক্ষণ করুন।</p>
         </div>
         <div class="payment-method-grid">
+          
+          <!-- ব্যাংক ট্রান্সফার কার্ড -->
           <article class="payment-card reveal">
             <div class="payment-card-icon"><i class="bi bi-bank"></i></div>
             <span class="payment-status">BANK TRANSFER</span>
             <h3>ব্যাংক ট্রান্সফার</h3>
             <p>অফিসিয়াল ব্যাংক অ্যাকাউন্টে সরাসরি জমা বা ট্রান্সফারের জন্য।</p>
-            <div class="payment-placeholder"><i class="bi bi-hourglass-split"></i><span>ব্যাংক তথ্য নিচে দেওয়া হলো</span></div>
+            <div class="payment-placeholder active">
+                <i class="bi bi-check2-circle"></i>
+                <span>ব্যাংক তথ্য নিচে দেওয়া হলো</span>
+            </div>
           </article>
+
+          <!-- মোবাইল ব্যাংকিং কার্ড (আপডেটেড) -->
           <article class="payment-card reveal delay-1">
             <div class="payment-card-icon"><i class="bi bi-phone"></i></div>
             <span class="payment-status">MOBILE FINANCE</span>
             <h3>মোবাইল ব্যাংকিং</h3>
             <p>bKash, Nagad বা অনুমোদিত মোবাইল ফাইন্যান্সিয়াল সেবার মাধ্যমে।</p>
-            <div class="payment-placeholder"><i class="bi bi-hourglass-split"></i><span>অফিসিয়াল নম্বর সংযোজনাধীন</span></div>
+            <div class="payment-placeholder active">
+                <i class="bi bi-credit-card-2-front"></i>
+                <span>বিকাশ/নগদ: 01818-830427</span>
+            </div>
+            <ul class="payment-instruction">
+              <li><i class="bi bi-check2-square"></i> লেনদেনের পর ইমেল ও মোবাইল এসএমএস চেক করুন।</li>
+              <li><i class="bi bi-check2-square"></i> মেম্বার পোর্টাল থেকে পেমেন্ট রিকুয়েস্ট পাঠান।</li>
+            </ul>
           </article>
+
+          <!-- সরাসরি জমা কার্ড -->
           <article class="payment-card reveal delay-2">
             <div class="payment-card-icon"><i class="bi bi-receipt"></i></div>
             <span class="payment-status">DIRECT DEPOSIT</span>
             <h3>সরাসরি জমা</h3>
             <p>অনুমোদিত দায়িত্বশীল ব্যক্তির মাধ্যমে জমা দিলে অবশ্যই রসিদ সংগ্রহ করুন।</p>
-            <div class="payment-placeholder"><i class="bi bi-check2-circle"></i><span>রসিদ ছাড়া লেনদেন সম্পন্ন করবেন না</span></div>
+            <div class="payment-placeholder">
+                <i class="bi bi-exclamation-triangle"></i>
+                <span>রসিদ ছাড়া লেনদেন সম্পন্ন করবেন না</span>
+            </div>
           </article>
+
         </div>
       </div>
     </section>
