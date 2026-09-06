@@ -378,3 +378,84 @@ h2 span, .section-heading h2 span, .philosophy-content h2 span, .portal-content 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
 }
+
+
+
+
+/* Bank Info Card Styling */
+.bank-info-card {
+    max-width: 650px;
+    margin: 40px auto;
+    padding: 32px;
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    box-shadow: var(--shadow-soft);
+}
+.bank-info-card h3 {
+    color: var(--primary);
+    font-size: 22px;
+    margin: 0 0 25px 0;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.bank-info-card h3 i {
+    color: var(--teal-accent);
+}
+.bank-detail-grid {
+    display: grid;
+    gap: 16px;
+}
+.bank-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+}
+.bank-row .label {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--muted);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-width: 150px;
+}
+.bank-row .label i {
+    color: var(--primary);
+    font-size: 15px;
+}
+.bank-row .value {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--ink);
+    text-align: right;
+    flex: 1;
+}
+
+/* Mobile Responsive for Bank Card */
+@media (max-width: 768px) {
+    .bank-info-card {
+        padding: 20px;
+        margin: 20px auto;
+    }
+    .bank-row {
+        flex-direction: column;
+        gap: 5px;
+        padding-bottom: 12px;
+        border-bottom: 1px dashed var(--border);
+    }
+    .bank-row:last-child {
+        border-bottom: none;
+    }
+    .bank-row .label {
+        min-width: 100%;
+    }
+    .bank-row .value {
+        text-align: left;
+        font-size: 14px;
+    }
+}
