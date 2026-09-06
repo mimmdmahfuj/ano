@@ -11,6 +11,145 @@
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/animations.css">
   <link rel="stylesheet" href="assets/css/responsive.css">
+
+  <!-- পেমেন্ট পেজের জন্য কাস্টম স্টাইল -->
+  <style>
+    /* Payment Intro */
+    .payment-intro { align-items: center; }
+    .payment-note {
+        display: flex;
+        gap: 20px;
+        padding: 30px;
+        border: 1px solid var(--border);
+        border-radius: 24px;
+        background: linear-gradient(145deg, #e3f2ef, #fff);
+        box-shadow: var(--shadow-soft);
+    }
+    .payment-note > i { font-size: 36px; color: var(--primary); flex-shrink: 0; }
+    .payment-note .kicker { margin-bottom: 5px; }
+    .payment-note h3 { margin: 0 0 8px; font-size: 18px; }
+    .payment-note p { margin: 0; font-size: 14px; color: var(--muted); }
+
+    /* Payment Methods Grid */
+    .payment-method-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        margin-top: 40px;
+    }
+    .payment-card {
+        padding: 28px;
+        border: 1px solid var(--border);
+        border-radius: 21px;
+        background: #fff;
+        box-shadow: 0 8px 24px rgba(6,56,51,.04);
+        transition: transform .25s var(--ease-out), box-shadow .25s var(--ease-out);
+    }
+    .payment-card:hover { transform: translateY(-7px); box-shadow: var(--shadow-soft); }
+    .payment-card-icon {
+        display: grid;
+        place-items: center;
+        width: 50px; height: 50px;
+        margin-bottom: 20px;
+        border-radius: 14px;
+        background: #e3f2ef;
+        color: var(--primary);
+        font-size: 22px;
+    }
+    .payment-status {
+        display: inline-block;
+        padding: 4px 8px;
+        margin-bottom: 12px;
+        border-radius: 6px;
+        background: #f0f7f5;
+        color: var(--teal-accent);
+        font: 800 9px Inter, sans-serif;
+        letter-spacing: .1em;
+    }
+    .payment-card h3 { font-size: 19px; margin-bottom: 10px; color: var(--ink); }
+    .payment-card p { font-size: 13px; color: var(--muted); margin-bottom: 20px; }
+    .payment-placeholder {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 12px;
+        border: 1px dashed var(--border);
+        border-radius: 12px;
+        background: #fafdfc;
+        font-size: 12px;
+        font-weight: 600;
+        color: var(--text);
+    }
+    .payment-placeholder i { color: var(--primary); font-size: 16px; }
+
+    /* Bank Details Section */
+    .payment-bank-section { background: var(--paper); }
+    .payment-bank-card {
+        max-width: 800px;
+        margin: 40px auto 0;
+        padding: 36px;
+        border: 1px solid var(--border);
+        border-radius: 24px;
+        background: #fff;
+        box-shadow: var(--shadow-soft);
+    }
+    .payment-bank-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        padding-bottom: 25px;
+        border-bottom: 1px solid var(--border);
+    }
+    .payment-bank-grid > div { display: flex; flex-direction: column; gap: 4px; }
+    .payment-bank-grid span { font-size: 12px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: .05em; }
+    .payment-bank-grid strong { font-size: 15px; font-weight: 700; color: var(--ink); }
+    .payment-bank-grid strong a { color: var(--primary); }
+
+    .payment-warning {
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+        margin-top: 25px;
+        padding: 16px;
+        border-radius: 14px;
+        background: #fff8e6;
+        border: 1px solid #ffeab3;
+    }
+    .payment-warning i { color: #d97706; font-size: 20px; }
+    .payment-warning p { margin: 0; font-size: 13px; color: #92400e; font-weight: 600; }
+
+    /* Steps Section */
+    .payment-steps {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+        margin-top: 40px;
+    }
+    .payment-step {
+        display: flex;
+        gap: 16px;
+        align-items: flex-start;
+    }
+    .payment-step span {
+        flex-shrink: 0;
+        display: grid;
+        place-items: center;
+        width: 44px; height: 44px;
+        border-radius: 50%;
+        background: var(--primary);
+        color: #fff;
+        font: 800 16px Inter, sans-serif;
+    }
+    .payment-step h3 { font-size: 17px; margin: 4px 0 6px; color: var(--ink); }
+    .payment-step p { font-size: 13px; color: var(--muted); margin: 0; }
+
+    /* Responsive */
+    @media (max-width: 992px) {
+        .payment-method-grid, .payment-steps { grid-template-columns: 1fr; max-width: 500px; margin-inline: auto; }
+        .payment-bank-grid { grid-template-columns: 1fr; }
+        .payment-intro { grid-template-columns: 1fr; gap: 30px; }
+    }
+  </style>
 </head>
 <body>
   <header class="site-header" id="top">
@@ -19,8 +158,8 @@
         <img class="brand-logo" src="assets/images/logo.png" alt="An Nafe Organization logo">
         <img class="brand-mark-img" src="assets/images/logo-mark.png" alt="ANO">
       </a>
-      <button class="mobile-menu-btn" aria-label="মেনু"><i class="bi bi-list"></i></button>
-      <nav class="main-nav">
+      <button class="mobile-menu-btn" aria-label="মেনু" id="menuBtn"><i class="bi bi-list"></i></button>
+      <nav class="main-nav" id="mainNav">
         <a href="index.html">হোম</a>
         <a href="about.html">আমাদের সম্পর্কে</a>
         <a href="activities.html">কার্যক্রম</a>
@@ -73,7 +212,7 @@
             <span class="payment-status">BANK TRANSFER</span>
             <h3>ব্যাংক ট্রান্সফার</h3>
             <p>অফিসিয়াল ব্যাংক অ্যাকাউন্টে সরাসরি জমা বা ট্রান্সফারের জন্য।</p>
-            <div class="payment-placeholder"><i class="bi bi-hourglass-split"></i><span>ব্যাংক তথ্য সংযোজনাধীন</span></div>
+            <div class="payment-placeholder"><i class="bi bi-hourglass-split"></i><span>ব্যাংক তথ্য নিচে দেওয়া হলো</span></div>
           </article>
           <article class="payment-card reveal delay-1">
             <div class="payment-card-icon"><i class="bi bi-phone"></i></div>
@@ -98,15 +237,16 @@
         <div class="section-head">
           <span class="kicker">OFFICIAL ACCOUNT DETAILS</span>
           <h2>ব্যাংক তথ্য</h2>
-          <p>প্রকৃত ব্যাংক তথ্য দায়িত্বশীল কর্তৃপক্ষের অনুমোদনের পরে এখানে প্রকাশ করা হবে।</p>
+          <p>নিচে আমাদের অফিসিয়াল ব্যাংক হিসাবের তথ্য দেওয়া হলো। লেনদেনের আগে অবশ্যই তথ্যগুলো মিলিয়ে নিন।</p>
         </div>
         <div class="payment-bank-card reveal">
           <div class="payment-bank-grid">
-            <div><span>ব্যাংকের নাম</span><strong>তথ্য সংযোজনাধীন</strong></div>
-            <div><span>অ্যাকাউন্টের নাম</span><strong>তথ্য সংযোজনাধীন</strong></div>
-            <div><span>অ্যাকাউন্ট নম্বর</span><strong>তথ্য সংযোজনাধীন</strong></div>
-            <div><span>শাখা</span><strong>তথ্য সংযোজনাধীন</strong></div>
-            <div><span>রাউটিং নম্বর</span><strong>তথ্য সংযোজনাধীন</strong></div>
+            <div><span>ব্যাংকের নাম</span><strong>The City Bank</strong></div>
+            <div><span>শাখা</span><strong>Dhanmondi (Dhaka South)</strong></div>
+            <div><span>অ্যাকাউন্টের নাম</span><strong>MOHAMMAD ATAULLAH, MUHAMMAD ABDUL HALIM, ABIR HUSSAIN ANIK</strong></div>
+            <div><span>অ্যাকাউন্ট নম্বর</span><strong>2704415478001</strong></div>
+            <div><span>রাউটিং নম্বর</span><strong>225261187</strong></div>
+            <div><span>অ্যাকাউন্টের ধরন</span><strong>HIGH VALUE SAVINGS A/C</strong></div>
             <div><span>যোগাযোগ</span><strong><a href="mailto:annafeorg@gmail.com">annafeorg@gmail.com</a></strong></div>
           </div>
           <div class="payment-warning"><i class="bi bi-info-circle"></i><p>লেনদেনের আগে অ্যাকাউন্টের নাম ও নম্বর আমাদের অফিসিয়াল যোগাযোগ মাধ্যমে মিলিয়ে নিন। ভুল বা অননুমোদিত লেনদেনের দায় সংগঠন গ্রহণ করবে না।</p></div>
@@ -141,7 +281,29 @@
     </div>
     <div class="container footer-bottom"><span>© <span id="year"></span> An-Nafe Organisation.</span><span>ANO · Established 2025</span></div>
   </footer>
+  
   <button class="to-top"><i class="bi bi-arrow-up"></i></button>
+  
+  <!-- Scripts -->
+  <script>
+    // Mobile Menu Toggle
+    const menuBtn = document.getElementById('menuBtn');
+    const mainNav = document.getElementById('mainNav');
+    menuBtn.addEventListener('click', () => {
+        mainNav.classList.toggle('active');
+        const icon = menuBtn.querySelector('i');
+        if(mainNav.classList.contains('active')) {
+            icon.classList.remove('bi-list');
+            icon.classList.add('bi-x-lg');
+        } else {
+            icon.classList.remove('bi-x-lg');
+            icon.classList.add('bi-list');
+        }
+    });
+
+    // Auto Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
   <script src="assets/js/main.js"></script>
 </body>
 </html>
