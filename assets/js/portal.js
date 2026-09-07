@@ -1,6 +1,6 @@
 const PORTALS = {
-  member: "https://script.google.com/macros/s/AKfycbxMwVL4VwYRXFWGn9ppr5Qs7ONcyJG_l6_rX6owmXUl2DqBsbGBgB_zdCuogooPRnzL1A/exec?p=member",
-  admin: "https://script.google.com/macros/s/AKfycbxMwVL4VwYRXFWGn9ppr5Qs7ONcyJG_l6_rX6owmXUl2DqBsbGBgB_zdCuogooPRnzL1A/exec"
+  member: "https://script.google.com/macros/s/AKfycbxRKo42ib1ijLIxacokcz1XpEF4R6iDJCrJYy_gdph4NW4Ou5J97cAfAu3XKuCPqICQjw/exec?p=member",
+  admin: "https://script.google.com/macros/s/AKfycbxRKo42ib1ijLIxacokcz1XpEF4R6iDJCrJYy_gdph4NW4Ou5J97cAfAu3XKuCPqICQjw/exec"
 };
 
 document.addEventListener("DOMContentLoaded", () => {
