@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="propGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#021c1a"/>
+      <stop offset="50%" stop-color="#073833"/>
+      <stop offset="100%" stop-color="#0b4e47"/>
+    </linearGradient>
+    <linearGradient id="goldGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e8bf72"/>
+      <stop offset="100%" stop-color="#c69234"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#propGrad)"/>
+  
+  <!-- Architectural skyline vector -->
+  <g transform="translate(250, 120)">
+    <rect x="50" y="80" width="70" height="150" fill="#0d4e47" rx="6"/>
+    <rect x="140" y="30" width="90" height="200" fill="#2ba89b" rx="8"/>
+    <rect x="250" y="100" width="65" height="130" fill="#0a3f39" rx="6"/>
+    <!-- Windows -->
+    <g fill="#9ce3d7" opacity="0.75">
+      <rect x="160" y="50" width="15" height="15" rx="2"/>
+      <rect x="195" y="50" width="15" height="15" rx="2"/>
+      <rect x="160" y="80" width="15" height="15" rx="2"/>
+      <rect x="195" y="80" width="15" height="15" rx="2"/>
+      <rect x="160" y="110" width="15" height="15" rx="2"/>
+      <rect x="195" y="110" width="15" height="15" rx="2"/>
+      <rect x="160" y="140" width="15" height="15" rx="2"/>
+      <rect x="195" y="140" width="15" height="15" rx="2"/>
+    </g>
+    <!-- Foundation line -->
+    <line x1="10" y1="230" x2="350" y2="230" stroke="#d4a34b" stroke-width="4"/>
+  </g>
+  
+  <rect x="50" y="380" width="700" height="85" rx="14" fill="rgba(3, 31, 29, 0.88)" stroke="rgba(43, 168, 155, 0.3)"/>
+  <text x="80" y="420" font-family="'Noto Sans Bengali', sans-serif" font-size="20" font-weight="bold" fill="#ffffff">হালাল আবাসন ও জমি উন্নয়ন প্রকল্প</text>
+  <text x="80" y="445" font-family="'Noto Sans Bengali', sans-serif" font-size="14" fill="#9ce3d7">ঝুঁকিমুক্ত স্থায়ী সম্পদে দীর্ঘমেয়াদী বিনিয়োগ কার্যক্রম</text>
+  <rect x="620" y="405" width="100" height="32" rx="16" fill="url(#goldGrad3)"/>
+  <text x="670" y="426" font-family="'Noto Sans Bengali', sans-serif" font-size="12" font-weight="bold" fill="#042320" text-anchor="middle">প্রকল্প</text>
+</svg>

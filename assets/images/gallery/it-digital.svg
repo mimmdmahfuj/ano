@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="itGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#021c19"/>
+      <stop offset="50%" stop-color="#073833"/>
+      <stop offset="100%" stop-color="#0e574f"/>
+    </linearGradient>
+    <linearGradient id="goldGrad6" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e8bf72"/>
+      <stop offset="100%" stop-color="#c69234"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#itGrad)"/>
+  
+  <!-- Digital tech & screen vector -->
+  <g transform="translate(400, 210)">
+    <!-- Screen mockup -->
+    <rect x="-120" y="-80" width="240" height="150" rx="14" fill="#042320" stroke="#2ba89b" stroke-width="3"/>
+    <rect x="-105" y="-65" width="210" height="110" rx="6" fill="#093f39"/>
+    <!-- Dashboard bars -->
+    <rect x="-90" y="-50" width="40" height="35" rx="4" fill="#d4a34b"/>
+    <rect x="-40" y="-50" width="65" height="15" rx="3" fill="#9ce3d7"/>
+    <rect x="-40" y="-30" width="45" height="15" rx="3" fill="#2ba89b"/>
+    <path d="M -90 20 L -60 -5 L -20 10 L 20 -20 L 60 5 L 90 -30" fill="none" stroke="#e8bf72" stroke-width="3"/>
+    <!-- Stand -->
+    <rect x="-20" y="70" width="40" height="20" fill="#2ba89b"/>
+    <rect x="-50" y="90" width="100" height="8" rx="4" fill="#d4a34b"/>
+  </g>
+  
+  <rect x="50" y="380" width="700" height="85" rx="14" fill="rgba(3, 31, 29, 0.88)" stroke="rgba(43, 168, 155, 0.3)"/>
+  <text x="80" y="420" font-family="'Noto Sans Bengali', sans-serif" font-size="20" font-weight="bold" fill="#ffffff">স্মার্ট মেম্বার পোর্টাল ও ডিজিটাল সেবা রূপান্তর</text>
+  <text x="80" y="445" font-family="'Noto Sans Bengali', sans-serif" font-size="14" fill="#9ce3d7">সদস্যদের সঞ্চয় ট্র্যাকিং ও অনলাইন আবেদনের আধুনিকায়ন</text>
+  <rect x="620" y="405" width="100" height="32" rx="16" fill="url(#goldGrad6)"/>
+  <text x="670" y="426" font-family="'Noto Sans Bengali', sans-serif" font-size="12" font-weight="bold" fill="#042320" text-anchor="middle">ডিজিটাল</text>
+</svg>

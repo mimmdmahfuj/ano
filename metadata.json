@@ -1,0 +1,6 @@
+{
+  "name": "আন নাফে অর্গানাইজেশন | An Nafe Organization",
+  "description": "আন নাফে অর্গানাইজেশন — বিনিয়োগের হালাল ও নিরাপদ স্থল। সততা, স্বচ্ছতা, জবাবদিহিতা ও সহযোগিতার ভিত্তিতে একটি সমবায়ী সংগঠন।",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

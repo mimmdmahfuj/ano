@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#042320"/>
+      <stop offset="50%" stop-color="#073833"/>
+      <stop offset="100%" stop-color="#0a534c"/>
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e8bf72"/>
+      <stop offset="100%" stop-color="#c69234"/>
+    </linearGradient>
+    <pattern id="gridPattern" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(156, 227, 215, 0.08)" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="500" fill="url(#bgGrad1)"/>
+  <rect width="800" height="500" fill="url(#gridPattern)"/>
+  
+  <!-- Subtle circular aura -->
+  <circle cx="400" cy="220" r="180" fill="none" stroke="rgba(212, 163, 75, 0.25)" stroke-width="1.5" stroke-dasharray="6,6"/>
+  <circle cx="400" cy="220" r="140" fill="rgba(11, 74, 67, 0.4)"/>
+  
+  <!-- Meeting Icon / Graphics -->
+  <g transform="translate(340, 160)">
+    <circle cx="60" cy="40" r="30" fill="url(#goldGrad)"/>
+    <path d="M 15 120 C 15 80, 105 80, 105 120 Z" fill="url(#goldGrad)"/>
+    <circle cx="0" cy="55" r="22" fill="#9ce3d7"/>
+    <path d="M -30 120 C -30 90, 30 90, 30 120 Z" fill="#9ce3d7"/>
+    <circle cx="120" cy="55" r="22" fill="#9ce3d7"/>
+    <path d="M 90 120 C 90 90, 150 90, 150 120 Z" fill="#9ce3d7"/>
+  </g>
+  
+  <!-- Overlay Card Info -->
+  <rect x="50" y="380" width="700" height="85" rx="14" fill="rgba(3, 31, 29, 0.85)" stroke="rgba(43, 168, 155, 0.3)"/>
+  <text x="80" y="420" font-family="'Noto Sans Bengali', sans-serif" font-size="20" font-weight="bold" fill="#ffffff">পরিচালনা পরিষদ ও সাধারণ সভা (AGM)</text>
+  <text x="80" y="445" font-family="'Noto Sans Bengali', sans-serif" font-size="14" fill="#9ce3d7">বার্ষিক অগ্রগতি পর্যালোচনা ও ভবিষ্যৎ বিনিয়োগ কর্মপরিকল্পনা প্রণয়ন</text>
+  <rect x="620" y="405" width="100" height="32" rx="16" fill="url(#goldGrad)"/>
+  <text x="670" y="426" font-family="'Noto Sans Bengali', sans-serif" font-size="12" font-weight="bold" fill="#042320" text-anchor="middle">মিটিং</text>
+</svg>

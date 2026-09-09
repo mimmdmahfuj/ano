@@ -1,0 +1,56 @@
+{
+  "id": "/",
+  "name": "আন নাফে অর্গানাইজেশন",
+  "short_name": "AN NAFE",
+  "description": "বিনিয়োগের হালাল ও নিরাপদ স্থল — আন নাফে অর্গানাইজেশন",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#073833",
+  "theme_color": "#073833",
+  "categories": ["finance", "business", "community"],
+  "icons": [
+    {
+      "src": "assets/images/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/images/logo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/images/logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "সদস্য আবেদন",
+      "short_name": "আবেদন",
+      "description": "নতুন সদস্য হিসেবে অনলাইনে আবেদন করুন",
+      "url": "https://forms.gle/ezDBS3Jg2vVDzApK7",
+      "icons": [{ "src": "assets/images/favicon.svg", "sizes": "any" }]
+    },
+    {
+      "name": "মেম্বার পোর্টাল",
+      "short_name": "পোর্টাল",
+      "description": "মেম্বার অ্যাকাউন্টে লগইন করুন",
+      "url": "/#portal",
+      "icons": [{ "src": "assets/images/favicon.svg", "sizes": "any" }]
+    },
+    {
+      "name": "পেমেন্ট তথ্য",
+      "short_name": "পেমেন্ট",
+      "description": "ব্যাংক ও বিকাশ লেনদেন তথ্য",
+      "url": "/payment.html",
+      "icons": [{ "src": "assets/images/favicon.svg", "sizes": "any" }]
+    }
+  ]
+}

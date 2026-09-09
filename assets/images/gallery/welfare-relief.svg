@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="welfGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#031e1c"/>
+      <stop offset="50%" stop-color="#073833"/>
+      <stop offset="100%" stop-color="#0e534b"/>
+    </linearGradient>
+    <linearGradient id="goldGrad4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e8bf72"/>
+      <stop offset="100%" stop-color="#c69234"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#welfGrad)"/>
+  
+  <!-- Helping hands / Care icon vector -->
+  <g transform="translate(400, 210) scale(1.2)">
+    <circle cx="0" cy="0" r="85" fill="rgba(212, 163, 75, 0.12)"/>
+    <!-- Heart & Caring Symbol -->
+    <path d="M 0 35 C -50 -15, -70 -60, -35 -85 C -10 -95, 0 -70, 0 -50 C 0 -70, 10 -95, 35 -85 C 70 -60, 50 -15, 0 35 Z" fill="#2ba89b"/>
+    <circle cx="0" cy="-25" r="18" fill="#d4a34b"/>
+  </g>
+  
+  <rect x="50" y="380" width="700" height="85" rx="14" fill="rgba(3, 31, 29, 0.88)" stroke="rgba(43, 168, 155, 0.3)"/>
+  <text x="80" y="420" font-family="'Noto Sans Bengali', sans-serif" font-size="20" font-weight="bold" fill="#ffffff">সামাজিক সহায়তা ও শীতবস্ত্র বিতরণ</text>
+  <text x="80" y="445" font-family="'Noto Sans Bengali', sans-serif" font-size="14" fill="#9ce3d7">সদস্যদের কল্যাণ তহবিল থেকে সুবিধাবঞ্চিত মানুষের পাশে দাঁড়ানো</text>
+  <rect x="620" y="405" width="100" height="32" rx="16" fill="url(#goldGrad4)"/>
+  <text x="670" y="426" font-family="'Noto Sans Bengali', sans-serif" font-size="12" font-weight="bold" fill="#042320" text-anchor="middle">সমাজকল্যাণ</text>
+</svg>
