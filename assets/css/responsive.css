@@ -150,4 +150,6 @@
   .speech-content p { font-size: 14px; line-height: 1.9; }
   .profile-card-copy { padding: 23px 21px 24px; }
   .profile-actions { grid-template-columns: 1fr 1fr; }
+  .pwa-modal-card { padding: 26px 20px 22px; border-radius: 22px; }
+  .gallery-section .section-heading h2 { font-size: 26px; }
 }

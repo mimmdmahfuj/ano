@@ -250,7 +250,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // --- 6. PWA Service Worker & Install Prompt ---
+  // --- 6. PWA Service Worker & Auto-Open Install Modal ---
   if ("serviceWorker" in navigator) {
     window.addEventListener("load", () => {
       navigator.serviceWorker.register("/sw.js").then(
@@ -264,23 +264,107 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Install Prompt Banner handling
-  let deferredPrompt;
+  // Standalone detection
+  const isStandalone =
+    window.matchMedia("(display-mode: standalone)").matches ||
+    window.navigator.standalone === true;
+
+  // iOS detection
+  const userAgent = (window.navigator.userAgent || "").toLowerCase();
+  const isIOS = /iphone|ipad|ipod/.test(userAgent);
+
+  let deferredPrompt = null;
+  const pwaModal = document.getElementById("pwaModal");
+  const pwaModalClose = document.getElementById("pwaModalClose");
+  const pwaInstallModalBtn = document.getElementById("pwaInstallModalBtn");
+  const pwaLaterModalBtn = document.getElementById("pwaLaterModalBtn");
+  const pwaIosGuide = document.getElementById("pwaIosGuide");
+
   const pwaBanner = document.querySelector(".pwa-install-banner");
   const installBtn = document.querySelector(".btn-pwa-install");
   const dismissBtn = document.querySelector(".btn-pwa-dismiss");
 
+  function openPwaModal() {
+    if (!pwaModal || isStandalone) return;
+    pwaModal.style.display = "grid";
+    requestAnimationFrame(() => {
+      pwaModal.classList.add("show");
+    });
+    // On iOS Safari, show the iOS guide
+    if (isIOS && pwaIosGuide) {
+      pwaIosGuide.style.display = "block";
+    }
+  }
+
+  function closePwaModal() {
+    if (!pwaModal) return;
+    pwaModal.classList.remove("show");
+    setTimeout(() => {
+      pwaModal.style.display = "none";
+    }, 280);
+  }
+
+  // Open modal when website opens!
+  if (pwaModal && !isStandalone) {
+    setTimeout(openPwaModal, 600);
+  }
+
   window.addEventListener("beforeinstallprompt", (e) => {
     e.preventDefault();
     deferredPrompt = e;
-    const dismissed = localStorage.getItem("ano_pwa_dismissed");
-    if (!dismissed && pwaBanner) {
-      setTimeout(() => {
-        pwaBanner.style.display = "flex";
-      }, 2000);
+  });
+
+  window.addEventListener("appinstalled", () => {
+    closePwaModal();
+    if (pwaBanner) pwaBanner.style.display = "none";
+    showToast("আন নাফে অ্যাপ সফলভাবে ইনস্টল করা হয়েছে!");
+  });
+
+  if (pwaModalClose) {
+    pwaModalClose.addEventListener("click", closePwaModal);
+  }
+  if (pwaLaterModalBtn) {
+    pwaLaterModalBtn.addEventListener("click", closePwaModal);
+  }
+  if (pwaModal) {
+    pwaModal.addEventListener("click", (e) => {
+      if (e.target === pwaModal) {
+        closePwaModal();
+      }
+    });
+  }
+
+  // Escape key closes modal
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && pwaModal && pwaModal.classList.contains("show")) {
+      closePwaModal();
     }
   });
 
+  if (pwaInstallModalBtn) {
+    pwaInstallModalBtn.addEventListener("click", async () => {
+      if (deferredPrompt) {
+        deferredPrompt.prompt();
+        const { outcome } = await deferredPrompt.userChoice;
+        if (outcome === "accepted") {
+          showToast("আন নাফে অ্যাপ হোম স্ক্রিনে যুক্ত হচ্ছে...");
+          closePwaModal();
+        }
+        deferredPrompt = null;
+      } else if (isIOS) {
+        if (pwaIosGuide) {
+          pwaIosGuide.style.display = "block";
+        }
+      } else {
+        showToast("আপনার ব্রাউজারের অ্যাড্রেস বার বা মেনু থেকে 'Install' বা 'Add to Home screen' নির্বাচন করুন।", 5000);
+        if (pwaIosGuide) {
+          pwaIosGuide.style.display = "block";
+        }
+      }
+    });
+  }
+
+  // Secondary banner handler
   if (installBtn) {
     installBtn.addEventListener("click", async () => {
       if (deferredPrompt) {
@@ -292,7 +376,7 @@ document.addEventListener("DOMContentLoaded", () => {
         deferredPrompt = null;
         if (pwaBanner) pwaBanner.style.display = "none";
       } else {
-        showToast("আপনার ব্রাউজারের মেনু থেকে 'Add to Home screen' বা 'Install' সিলেক্ট করুন।", 5000);
+        openPwaModal();
       }
     });
   }
@@ -300,7 +384,6 @@ document.addEventListener("DOMContentLoaded", () => {
   if (dismissBtn && pwaBanner) {
     dismissBtn.addEventListener("click", () => {
       pwaBanner.style.display = "none";
-      localStorage.setItem("ano_pwa_dismissed", "true");
     });
   }
 });

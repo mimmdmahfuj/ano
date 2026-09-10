@@ -1190,10 +1190,8 @@
 <section class="section-padding gallery-section" id="gallery">
     <div class="container">
         <div class="section-heading reveal">
-            <div>
-                <span class="section-label">PHOTO GALLERY</span>
-                <h2>বাস্তব প্রকল্প ও <span>কার্যক্রমের চিত্র।</span></h2>
-            </div>
+            <span class="section-label">PHOTO GALLERY</span>
+            <h2>বাস্তব প্রকল্প ও <span>কার্যক্রমের চিত্র।</span></h2>
             <p>
                 সততা ও স্বচ্ছতার বাস্তব প্রতিফলন—আমাদের নিয়মিত সাধারণ সভা, মাঠপর্যায়ের বিনিয়োগ প্রকল্প, সামাজিক কল্যাণমূলক কর্মসূচি ও ডিজিটাল সেবার কিছু স্থিরচিত্র।
             </p>
@@ -1965,6 +1963,68 @@
         <div class="gallery-modal-body">
             <h3 class="gallery-modal-title"></h3>
             <p class="gallery-modal-text"></p>
+        </div>
+    </div>
+</div>
+
+<!-- =====================================================
+     PWA INSTALL MODAL (ওয়েবসাইট খুললেই ইনস্টল মোডাল)
+===================================================== -->
+<div id="pwaModal" class="pwa-modal-overlay" role="dialog" aria-modal="true" aria-labelledby="pwaModalTitle">
+    <div class="pwa-modal-card">
+        <button type="button" class="pwa-modal-close" id="pwaModalClose" aria-label="বন্ধ করুন">
+            <i class="bi bi-x-lg"></i>
+        </button>
+        <div class="pwa-modal-header">
+            <div class="pwa-app-icon-wrap">
+                <img src="assets/images/logo-mark.png" alt="ANO Logo" class="pwa-app-icon">
+                <span class="pwa-app-badge"><i class="bi bi-patch-check-fill"></i></span>
+            </div>
+            <span class="pwa-kicker"><i class="bi bi-phone"></i> অফিসিয়াল অ্যাপ</span>
+            <h3 id="pwaModalTitle" class="pwa-modal-title">আন নাফে অ্যাপ ইনস্টল করুন</h3>
+            <p class="pwa-subtitle">সহজ ও দ্রুত অ্যাক্সেস পেতে আপনার মোবাইল বা কম্পিউটারের হোমস্ক্রিনে অফিসিয়াল অ্যাপ হিসেবে যুক্ত করে নিন।</p>
+        </div>
+
+        <div class="pwa-features-list">
+            <div class="pwa-feature-item">
+                <div class="pwa-feature-icon"><i class="bi bi-lightning-charge-fill"></i></div>
+                <div>
+                    <strong>অত্যন্ত দ্রুত ও স্মুথ</strong>
+                    <span>কোনো বাফারিং ছাড়াই তাৎক্ষণিক লোড হবে</span>
+                </div>
+            </div>
+            <div class="pwa-feature-item">
+                <div class="pwa-feature-icon"><i class="bi bi-phone-fill"></i></div>
+                <div>
+                    <strong>এক ক্লিকে সরাসরি প্রবেশ</strong>
+                    <span>হোমস্ক্রিন থেকে সরাসরি পোর্টাল ও ফিচার এক্সেস</span>
+                </div>
+            </div>
+            <div class="pwa-feature-item">
+                <div class="pwa-feature-icon"><i class="bi bi-shield-check"></i></div>
+                <div>
+                    <strong>শতভাগ নিরাপদ ও লাইটওয়েট</strong>
+                    <span>কোনো মেমোরি খরচ নেই এবং স্বয়ংক্রিয় আপডেট</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- iOS Guide (Auto shown on iPhone/iPad or help) -->
+        <div id="pwaIosGuide" class="pwa-ios-instructions" style="display: none;">
+            <div class="pwa-ios-badge"><i class="bi bi-apple"></i> আইফোনে ইনস্টল করার সহজ নিয়ম:</div>
+            <ol>
+                <li>Safari ব্রাউজারের নিচে শেয়ার বোতামে (<i class="bi bi-box-arrow-up"></i> <strong>Share</strong>) ট্যাপ করুন।</li>
+                <li>নিচে স্ক্রোল করে <strong>"Add to Home Screen"</strong> (হোম স্ক্রিনে যোগ করুন) নির্বাচন করুন।</li>
+            </ol>
+        </div>
+
+        <div class="pwa-modal-actions">
+            <button type="button" id="pwaInstallModalBtn" class="pwa-btn-main">
+                <i class="bi bi-download"></i> এখনই ইনস্টল করুন
+            </button>
+            <button type="button" id="pwaLaterModalBtn" class="pwa-btn-secondary">
+                পরে করব
+            </button>
         </div>
     </div>
 </div>
